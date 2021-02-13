@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_BUF 6
-typedef struct stack  {
+struct stack  {
 	int top1;
 	int top2;
-	int buffer[ MAX_BUF ]
-}stack;
+	int buffer[ MAX_BUF ];
+};
 
 stack s={ -1, MAX_BUF};
 
@@ -50,8 +50,7 @@ int pop2( ) {
 	return x;
 }
 
-int main( int argc, char **argv ) {
-
+void two_stacks_in_one_array( ) {
 	for ( int i=0;i<MAX_BUF/2+1;i++) {
 		push1(i+1);
 		push2(i+1);
@@ -60,7 +59,4 @@ int main( int argc, char **argv ) {
 		pop1();
 		pop2();
 	}
-
-
-	return (0);
 }
